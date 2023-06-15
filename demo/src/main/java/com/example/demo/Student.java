@@ -1,15 +1,17 @@
 package com.example.demo;
 
 public class Student {
-    public final long ID;
-    public final String Name;
-    public final String Number;
-    public final String Grupa;
-
     public Student(long id, String name, String number, String grupa) {
-        ID = id;
-        Name = name;
-        Number = number;
-        Grupa = grupa;
+        this.id = id;
+        this.name = name;
+        this.number = number;
+        this.grupa = grupa;
     }
+
+    public final long id;
+    public final String name;
+    public final String number;
+    public final String grupa;
+
+
 }

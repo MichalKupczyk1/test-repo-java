@@ -1,13 +1,18 @@
 package com.example.demo;
 
-public class NewStudent {
-    public final String Name;
-    public final String Number;
-    public final String Grupa;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-    public NewStudent(String name, String number, String grupa) {
-        Name = name;
-        Number = number;
-        Grupa = grupa;
+
+public class NewStudent {
+    final String Name;
+    final String number;
+    final String grupa;
+    @JsonCreator
+    public NewStudent(@JsonProperty("name") String name,
+                      @JsonProperty("number") String number, @JsonProperty("grupa") String grupa) {
+        this.Name = name;
+        this.number = number;
+        this.grupa = grupa;
     }
 }

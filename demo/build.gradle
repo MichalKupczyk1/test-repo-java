@@ -1,7 +1,7 @@
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '2.7.10'
-	id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+    id 'org.springframework.boot' version '2.7.10'
+    id 'io.spring.dependency-management' version '1.1.0'
 }
 
 group = 'com.example'
@@ -9,20 +9,36 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
-test {
-	useJUnitPlatform()
-}
+
+//dependencies {
+//    implementation 'org.springframework.boot:spring-boot-starter-web'
+//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    // https://mvnrepository.com/artifact/io.vavr/vavr
+//    implementation 'io.vavr:vavr:0.10.4'
+//    testImplementation 'junit:junit:4.13.1'
+//    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//  //  testImplementation group: 'com.h2database', name: 'h2', version: '2.1.214'
+//    // https://mvnrepository.com/artifact/com.h2database/h2
+//    testImplementation group: 'com.h2database', name: 'h2', version: '2.1.214'
+//
+//
+//}
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation group: 'io.vavr', name: 'vavr', version: '0.10.3'
-	testImplementation 'junit:junit:4.13.1'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	testImplementation group: 'com.h2database', name: 'h2', version: '2.1.214'
+
+    implementation group: 'io.vavr', name: 'vavr', version: '1.0.0-alpha-3'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'junit:junit:4.12'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'com.h2database:h2:2.1.214'
+    implementation 'io.springfox:springfox-swagger2:2.9.2'
+    implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
